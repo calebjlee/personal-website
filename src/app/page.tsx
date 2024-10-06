@@ -55,8 +55,8 @@ export default function Home() {
     {
       degree: "B.S. in Data Science and Mathematics",
       school: "University of Michigan",
-      date: "2023 - 2026",
-      description: "Relevant coursework: Machine Learning, Data Structures and Algorithms, Discrete Math",
+      // date: "2023 - 2026",
+      description: "Relevant coursework: Machine Learning, Data Structures and Algorithms, Combinatorics & Graph Theory",
       clubs: "Clubs I'm a part of: MEG Consulting, Atlas Digital Consulting, Michigan Finance and Mathematics Society"
     },
   ];
@@ -155,7 +155,8 @@ export default function Home() {
             <div key={index} className={styles.educationItem}>
               <h3 className={styles.educationDegree}>{edu.degree}</h3>
               <p className={styles.educationSchool}>
-                {edu.school} | {edu.date}
+                {edu.school}
+                {/* {edu.school} | {edu.date} */}
               </p>
               <p className={styles.educationDescription}>{edu.description}</p>
               <p className={styles.educationDescription}>{edu.clubs}</p>
