@@ -187,6 +187,7 @@
 .experienceList,
 .educationList {
   margin-bottom: 2vh; 
+  width: 50vw;
 }
 
 .experienceItem,

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Header from "../components/header";
 import Footer from "../components/footer";
 import styles from '/styles/Home.module.css';
+import Image from 'next/image';
 
 export default function Home() {
   const skills = [
@@ -70,13 +71,13 @@ export default function Home() {
           {/* Social Icons */}
           <div className={styles.socialIcons}>
             <a href="https://linkedin.com/in/calebjl" target="_blank" rel="noopener noreferrer">
-              <img src="/icons/linkedin.png" alt="LinkedIn" className={styles.icon} />
+              <Image src="/icons/linkedin.png" alt="LinkedIn" className={styles.icon} width={300} height={300}/>
             </a>
             <a href="https://github.com/calebjlee" target="_blank" rel="noopener noreferrer">
-              <img src="/icons/github.png" alt="GitHub" className={styles.icon} />
+              <Image src="/icons/github.png" alt="GitHub" className={styles.icon} width={300} height={300}/>
             </a>
             <a href="mailto:calebjl@umich.edu">
-              <img src="/icons/email.png" alt="Email" className={styles.icon} />
+              <Image src="/icons/email.png" alt="Email" className={styles.icon} width={300} height={300}/>
             </a>
           </div>
 
@@ -95,12 +96,12 @@ export default function Home() {
       <section id="about" className={styles.section}>
         <h2 className={styles.sectionTitle}>About Me</h2>
         <p className={styles.text}>
-          Hi! I'm Caleb, a passionate Software Engineer from Irvine, California. I'm currently studying Data Science and Mathematics at the University of Michigan. 
+          Hi! I&#39;m Caleb, a passionate Software Engineer from Irvine, California. I&#39;m currently studying Data Science and Mathematics at the University of Michigan. 
           Last summer I interned at Forian, a publicly-traded healthtech firm, where I helped create the back-end of data analytics tools on healthcare data.
         </p>
         <p className={styles.text}>
-          On campus, I'm also involved in a business consulting club and a tech consulting club, where I've worked with large Fortune 100 companies like General Motors as well as smaller local companies like Sister Pie.
-          I'm also a part of the Lab of Geometry at Michigan (Log(M)), where I conduct research on the large scale geometry of integers.
+          On campus, I&#39;m also involved in a business consulting club and a tech consulting club, where I&#39;ve worked with large Fortune 100 companies like General Motors as well as smaller local companies like Sister Pie.
+          I&#39;m also a part of the Lab of Geometry at Michigan (Log(M)), where I conduct research on the large scale geometry of integers.
           Outside of academics, I enjoy playing badminton and logical games like chess.
         </p>
       </section>
@@ -164,7 +165,6 @@ export default function Home() {
           <a className={styles.projectsLink}>My Projects →</a>
         </Link>
       </div>
-
 
       <Footer />
     </div>
