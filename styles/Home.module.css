@@ -1,0 +1,241 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+}
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.heroHeader {
+  font-size: 4vw;
+  font-weight: bold;
+  margin-bottom: 2vh;
+  color: #ffffff;
+}
+
+.heroSubtitle {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 2vw;
+  padding: 1.5vw;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 2.5vw;
+  margin-top: 2.5vh;
+}
+
+.icon {
+  width: 3.5vw;
+  height: 3.5vw;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.2);
+}
+
+.scrollButton {
+  position: absolute;
+  bottom: 4vh;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.scrollLink {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+}
+
+.arrowDown {
+  width: 2vw;
+  height: 2vw;
+  border-bottom: 0.2vw solid #fff;
+  border-right: 0.2vw solid #fff;
+  transform: rotate(45deg);
+  margin-bottom: 1.5vh;
+  animation: bounce 2.75s infinite;
+}
+
+.learnMore {
+  padding-top: 2vh;
+  font-size: 1.8vw;
+  color: #ffffff;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80% {
+    transform: translateY(0) rotate(45deg);
+  }
+  40% {
+    transform: translateY(1vh) rotate(45deg);
+  }
+  60% {
+    transform: translateY(0.5vh) rotate(45deg);
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 0.3vh;
+  background-color: #333333;
+  margin: 2.5vh 0;
+}
+
+.section {
+  padding: 6vh 2vw;
+  max-width: 80vw;
+  margin: 0 auto;
+}
+
+.sectionTitle {
+  font-size: 3vw;
+  font-weight: bold;
+  margin-bottom: 3vh;
+  text-align: center;
+}
+
+.text {
+  font-size: 1.8vw;
+  margin-bottom: 2.5vh;
+}
+
+/* My Skills Section */
+.skillGrid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column for mobile */
+  gap: 2.5vw;
+}
+
+@media (min-width: 1200px) { 
+  /* Two skill cards per row */
+  .skillGrid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+    justify-content: space-between; /* Ensure proper spacing between cards */
+  }
+}
+
+.skillCard {
+  background-color: #2d2d2d;
+  padding: 1.5vw;
+  border-radius: 1vw;
+  transition: all 0.3s ease;
+  width: 30vw; /* Set the width of the cards */
+  margin: 0 auto; /* Center the cards horizontally */
+}
+
+.skillCard:hover {
+  box-shadow: 0 0 1.2vw rgba(59, 130, 246, 0.5);
+  transform: scale(1.05);
+}
+
+.skillHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.8vw;
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+.skillName {
+  font-size: 1vw; /* Keep the skill name font size as desired */
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.skillLevel {
+  font-size: 0.9vw; /* Keep the skill level font size */
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.skillBarBackground {
+  background-color: #4b5563;
+  border-radius: 9999px;
+  height: 1.2vh;
+}
+
+.skillBar {
+  background-color: #3b82f6;
+  height: 1.2vh;
+  border-radius: 9999px;
+}
+
+/* Experience & Education Section */
+.experienceList,
+.educationList {
+  margin-bottom: 2vh; 
+}
+
+.experienceItem,
+.educationItem {
+  border-left: 0.15vw solid #4b5563; 
+  padding-left: 1vw;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  transition: all 0.3s ease;
+  border-radius: 0.5vw; 
+}
+
+.experienceItem:hover,
+.educationItem:hover {
+  box-shadow: 0 0 0.8vw rgba(59, 130, 246, 0.5);
+  transform: scale(1.05);
+}
+
+.experienceTitle,
+.educationDegree {
+  font-size: 1.25vw; 
+  font-weight: 600;
+}
+
+.experienceCompany,
+.educationSchool {
+  color: #9ca3af;
+  font-size: 1vw;
+}
+
+.experienceDescription,
+.educationDescription {
+  margin-top: 1vh;
+  font-size: 1vw; 
+}
+
+.projectsLinkContainer {
+  text-align: center;
+  padding: 5vh 0;
+}
+
+.projectsLink {
+  font-size: 2.5vw;
+  font-weight: bold;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.projectsLink:hover {
+  color: #9ca3af;
+}

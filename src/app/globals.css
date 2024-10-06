@@ -2,26 +2,98 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* Global styles for dark theme using Montserrat */
+html, body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #414141; /* Dark background */
+  color: #e0e0e0; /* Light text */
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Header styling */
+header {
+  background-color: #1e1e1e; /* Slightly lighter dark for the header */
+  color: #ffffff; /* White text for the header */
+  padding: 2vw; /* Scale padding to viewport width */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Subtle shadow */
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+.logo {
+  font-size: 2vw; /* Scale font size to viewport width */
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  color: #ffffff; /* White logo text */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.nav {
+  display: flex;
+  gap: 1vw; /* Scale gap to viewport width */
+}
+
+.navLink {
+  letter-spacing: 0.05em;
+  color: #9e9e9e; /* Soft gray navigation links */
+}
+
+.navLink:hover {
+  text-decoration: underline;
+  color: #ffffff; /* White on hover */
+}
+
+/* Main Content Styling */
+.main {
+  background-color: #1a1a1a; /* Darker background for main content */
+  padding: 4vw; /* Scale padding to viewport width */
+  color: #e0e0e0;
+}
+
+h1, h2, h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* Bold for headings */
+  letter-spacing: 0.05em;
+  color: #ffffff;
+  text-transform: uppercase; /* Optional: Adds all-caps styling */
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400; /* Regular weight for body text */
+  color: #cccccc; /* Light gray for body text */
+}
+
+/* Card styling */
+.card {
+  background-color: #242424; /* Dark card background */
+  padding: 1.5vw; /* Scale padding to viewport width */
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -1px rgba(0, 0, 0, 0.2); /* Darker shadow */
+  color: #e0e0e0; /* Light card text */
+}
+
+.cardTitle {
+  font-size: 2vw; /* Scale font size to viewport width */
+  font-weight: bold;
+  letter-spacing: 0.025em;
+  color: #ffffff; /* White card title */
+}
+
+/* Footer styling */
+footer {
+  background-color: #1e1e1e; /* Dark footer background */
+  padding: 2vh 0; /* Scale padding to viewport height */
+  color: #9e9e9e; /* Light gray for footer text */
+  text-align: center;
+}
+
+footer a {
+  color: #9e9e9e;
+}
+
+footer a:hover {
+  color: #ffffff;
 }

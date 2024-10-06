@@ -1,0 +1,22 @@
+.footer {
+  background-color: #1e1e1e;
+  padding: 1% 0; /* Reduced padding to minimize footer height */
+  /* Removed margin-top to prevent extra space above the footer */
+}
+
+.footerContent {
+  max-width: 72%;
+  margin: 0 auto;
+  padding: 0 1%;
+  text-align: center;
+}
+
+.footerText {
+  letter-spacing: 0.025em;
+  color: #9e9e9e;
+}
+
+.divider {
+  margin: 1% 0; /* Reduced margin to minimize footer height */
+  border-bottom: 2px solid #333333;
+}

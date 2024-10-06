@@ -1,0 +1,36 @@
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: #1e1e1e;
+  padding: 1vw; /* Scale padding to viewport width */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 0.125vw 0.25vw rgba(0, 0, 0, 0.7); /* Scale box shadow to viewport width */
+}
+
+.logo {
+  width: 5vw; /* Scale width to viewport width */
+  height: 5vw; /* Scale height to viewport width */
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.nav {
+  display: flex;
+  gap: 1vw; /* Scale gap to viewport width */
+}
+
+.navLink {
+  letter-spacing: 0.025em;
+  color: #9e9e9e;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0.5vw 1vw; /* Scale padding to viewport width */
+}
+
+.navLink:hover {
+  color: #ffffff;
+}

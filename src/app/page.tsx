@@ -1,101 +1,172 @@
-import Image from "next/image";
+import Link from "next/link";
+import Header from "../components/header";
+import Footer from "../components/footer";
+import styles from '/styles/Home.module.css';
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+  const skills = [
+    { name: "Python", level: 95 },
+    { name: "C++", level: 90 },
+    { name: "SQL", level: 85 },
+    { name: "TypeScript", level: 80 },
+    { name: "React", level: 80 },
+    { name: "HTML/CSS/Tailwind", level: 80 },
+    { name: "JavaScript", level: 75 },
+    { name: "AWS", level: 75 },
+    { name: "Flask", level: 75 },
+    { name: "PlayWright", level: 70 },
+    { name: "APIs", level: 85 },
+    { name: "Web Hosting", level: 95 },
+    { name: "PowerPoint", level: 90 },
+    { name: "Excel", level: 85 },
+  ];
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+  const experiences = [
+    {
+      title: "Software Engineering Intern",
+      company: "Forian",
+      date: "June 2024 - August 2024",
+      description: "Developed back-end data analytics tools for healthcare data.",
+    },
+    {
+      title: "Research Assistant",
+      company: "Lab of Geometry at Michigan (Log(M))",
+      date: "September 2024 - Present",
+      description: "Conducting research on the large scale geometry of integers.",
+    },
+    {
+      title: "Business Analyst",
+      company: "MEG Consulting",
+      date: "January 2023 - Present",
+      description: "Working with Fortune 100 companies and local businesses on various projects.",
+    },
+    {
+      title: "Software Analyst",
+      company: "Atlas Digital Consulting",
+      date: "September 2024 - Present",
+      description: "Creating software solutions to business problems.",
+    },
+  ];
+
+  const education = [
+    {
+      degree: "B.S. in Data Science and Mathematics",
+      school: "University of Michigan",
+      date: "2023 - 2026",
+      description: "Relevant coursework: Machine Learning, Data Structures and Algorithms, Discrete Math",
+    },
+  ];
+
+  return (
+    <div className={styles.container}>
+      <Header />
+
+      {/* Home Section */}
+      <section id="home" className={styles.heroSection}>
+        <div className={styles.main}>
+          <h1 className={styles.heroHeader}>Caleb Lee</h1>
+          <h2 className={styles.heroSubtitle}>Welcome to my portfolio!</h2>
+
+          {/* Social Icons */}
+          <div className={styles.socialIcons}>
+            <a href="https://linkedin.com/in/calebjl" target="_blank" rel="noopener noreferrer">
+              <img src="/icons/linkedin.png" alt="LinkedIn" className={styles.icon} />
+            </a>
+            <a href="https://github.com/calebjlee" target="_blank" rel="noopener noreferrer">
+              <img src="/icons/github.png" alt="GitHub" className={styles.icon} />
+            </a>
+            <a href="mailto:calebjl@umich.edu">
+              <img src="/icons/email.png" alt="Email" className={styles.icon} />
+            </a>
+          </div>
+
+          {/* Scroll Button */}
+          <div className={styles.scrollButton}>
+            <a href="#about" className={styles.scrollLink}>
+              <span className={styles.arrowDown}></span>
+              <h3 className={styles.learnMore}>Learn more</h3>
+            </a>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section>
+
+      {/* About Section */}
+      <div className={styles.divider} />
+      <section id="about" className={styles.section}>
+        <h2 className={styles.sectionTitle}>About Me</h2>
+        <p className={styles.text}>
+          Hi! I'm Caleb, a passionate Software Engineer from Irvine, California. I'm currently studying Data Science and Mathematics at the University of Michigan. 
+          Last summer I interned at Forian, a publicly-traded healthtech firm, where I helped create the back-end of data analytics tools on healthcare data.
+        </p>
+        <p className={styles.text}>
+          On campus, I'm also involved in a business consulting club and a tech consulting club, where I've worked with large Fortune 100 companies like General Motors as well as smaller local companies like Sister Pie.
+          I'm also a part of the Lab of Geometry at Michigan (Log(M)), where I conduct research on the large scale geometry of integers.
+          Outside of academics, I enjoy playing badminton and logical games like chess.
+        </p>
+      </section>
+
+      {/* Skills Section */}
+      <section id="skills" className={styles.section}>
+        <h2 className={styles.sectionTitle}>My Skills</h2>
+        <div className={styles.skillGrid}>
+          {skills.map((skill, index) => (
+            <div key={index} className={styles.skillCard}>
+              <div className={styles.skillHeader}>
+                <span className={styles.skillName}>{skill.name}</span>
+                <span className={styles.skillLevel}>{skill.level}%</span>
+              </div>
+              <div className={styles.skillBarBackground}>
+                <div
+                  className={styles.skillBar}
+                  style={{ width: `${skill.level}%` }}
+                ></div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Experience Section */}
+      <section id="experience" className={styles.section}>
+        <h2 className={styles.sectionTitle}>My Experience</h2>
+        <div className={styles.experienceList}>
+          {experiences.map((exp, index) => (
+            <div key={index} className={styles.experienceItem}>
+              <h3 className={styles.experienceTitle}>{exp.title}</h3>
+              <p className={styles.experienceCompany}>
+                {exp.company} | {exp.date}
+              </p>
+              <p className={styles.experienceDescription}>{exp.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <section id="education" className={styles.section}>
+        <h2 className={styles.sectionTitle}>Education</h2>
+        <div className={styles.educationList}>
+          {education.map((edu, index) => (
+            <div key={index} className={styles.educationItem}>
+              <h3 className={styles.educationDegree}>{edu.degree}</h3>
+              <p className={styles.educationSchool}>
+                {edu.school} | {edu.date}
+              </p>
+              <p className={styles.educationDescription}>{edu.description}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Projects Link */}
+      <div className={styles.projectsLinkContainer}>
+        <Link href="/projects" legacyBehavior>
+          <a className={styles.projectsLink}>My Projects →</a>
+        </Link>
+      </div>
+
+
+      <Footer />
     </div>
   );
 }
