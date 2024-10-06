@@ -55,6 +55,7 @@ export default function Home() {
       school: "University of Michigan",
       date: "2023 - 2026",
       description: "Relevant coursework: Machine Learning, Data Structures and Algorithms, Discrete Math",
+      clubs: "Clubs I'm a part of: MEG Consulting, Atlas Digital Consulting, Michigan Finance and Mathematics Society"
     },
   ];
 
@@ -92,21 +93,21 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-      <div className={styles.divider} />
-      <section id="about" className={styles.section}>
-        <h2 className={styles.sectionTitle}>About Me</h2>
-        <p className={styles.text}>
-          Hi! I&#39;m Caleb, a passionate Software Engineer from Irvine, California. I&#39;m currently studying Data Science and Mathematics at the University of Michigan. 
-          Last summer I interned at Forian, a publicly-traded healthtech firm, where I helped create the back-end of data analytics tools on healthcare data.
-        </p>
-        <p className={styles.text}>
-          On campus, I&#39;m also involved in a business consulting club and a tech consulting club, where I&#39;ve worked with large Fortune 100 companies like General Motors as well as smaller local companies like Sister Pie.
-          I&#39;m also a part of the Lab of Geometry at Michigan (Log(M)), where I conduct research on the large scale geometry of integers.
-          Outside of academics, I enjoy playing badminton and logical games like chess.
-        </p>
-      </section>
+        <div className={styles.divider} />
+        <section id="about" className={styles.section}>
+          <h2 className={styles.sectionTitle}>About Me</h2>
+          <p className={styles.text}>
+            Hi! I&apos;m Caleb, a passionate Software Engineer from Irvine, California. I&apos;m currently studying Data Science and Mathematics at the University of Michigan. 
+            Last summer I interned at Forian, a publicly-traded healthtech firm, where I helped create the back-end of data analytics tools on healthcare data.
+          </p>
+          <p className={styles.text}>
+            On campus, I&apos;m also involved in a business consulting club and a tech consulting club, where I&apos;ve worked with large Fortune 100 companies like General Motors as well as smaller local companies like Sister Pie.
+            I&apos;m also a part of the Lab of Geometry at Michigan (Log(M)), where I conduct research on the large scale geometry of integers.
+            Outside of academics, I enjoy playing badminton and logical games like chess.
+          </p>
+        </section>
 
-      {/* Skills Section */}
+        {/* Skills Section */}
       <section id="skills" className={styles.section}>
         <h2 className={styles.sectionTitle}>My Skills</h2>
         <div className={styles.skillGrid}>
@@ -154,6 +155,8 @@ export default function Home() {
                 {edu.school} | {edu.date}
               </p>
               <p className={styles.educationDescription}>{edu.description}</p>
+              <div className={styles.divider} />
+              <p className={styles.educationDescription}>{edu.clubs}</p>
             </div>
           ))}
         </div>
