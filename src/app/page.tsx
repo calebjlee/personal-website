@@ -13,9 +13,11 @@ export default function Home() {
     { name: "React", level: 80 },
     { name: "HTML/CSS/Tailwind", level: 80 },
     { name: "JavaScript", level: 75 },
+    { name: "React Native", level: 85 },
+    { name: "Git", level: 95 },
     { name: "AWS", level: 75 },
     { name: "Flask", level: 75 },
-    { name: "PlayWright", level: 70 },
+    { name: "Microsoft PlayWright", level: 70 },
     { name: "APIs", level: 85 },
     { name: "Web Hosting", level: 95 },
     { name: "PowerPoint", level: 90 },
@@ -93,8 +95,9 @@ export default function Home() {
       </section>
 
       {/* About Section */}
-        <div className={styles.divider} />
-        <section id="about" className={styles.section}>
+        <div style={{marginBottom: '20vh'}}/>
+        <div id="about" className={styles.divider} />
+        <section  className={styles.section}>
           <h2 className={styles.sectionTitle}>About Me</h2>
           <p className={styles.text}>
             Hi! I&apos;m Caleb, a passionate Software Engineer from Irvine, California. I&apos;m currently studying Data Science and Mathematics at the University of Michigan. 
@@ -155,7 +158,6 @@ export default function Home() {
                 {edu.school} | {edu.date}
               </p>
               <p className={styles.educationDescription}>{edu.description}</p>
-              <div className={styles.divider} />
               <p className={styles.educationDescription}>{edu.clubs}</p>
             </div>
           ))}

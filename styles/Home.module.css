@@ -100,8 +100,8 @@
 .divider {
   width: 100%;
   height: 0.3vh;
+  margin-bottom: 20vh;
   background-color: #333333;
-  margin: 2.5vh 0;
 }
 
 .section {
@@ -125,14 +125,14 @@
 /* My Skills Section */
 .skillGrid {
   display: grid;
-  grid-template-columns: 1fr; /* Single column for mobile */
+  grid-template-columns: repeat(4, 1fr); /* Single column for mobile */
   gap: 2.5vw;
 }
 
 @media (min-width: 1200px) { 
   /* Two skill cards per row */
   .skillGrid {
-    grid-template-columns: repeat(2, 1fr); /* Two columns on larger screens */
+    grid-template-columns: repeat(4, 1fr); /* Two columns on larger screens */
     justify-content: space-between; /* Ensure proper spacing between cards */
   }
 }
@@ -142,7 +142,7 @@
   padding: 1.5vw;
   border-radius: 1vw;
   transition: all 0.3s ease;
-  width: 30vw; /* Set the width of the cards */
+  width: 18vw; /* Set the width of the cards */
   margin: 0 auto; /* Center the cards horizontally */
 }
 

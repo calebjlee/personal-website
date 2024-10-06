@@ -39,6 +39,9 @@
     font-weight: 900;
     position: relative;
     transition: color 0.3s;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide any overflowing text */
+    text-overflow: ellipsis; /* Show ellipsis (...) for truncated text */
   }
   
   .sectionText::before {
