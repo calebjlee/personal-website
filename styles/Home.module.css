@@ -1,3 +1,5 @@
+/* Your existing desktop-first CSS is unchanged */
+
 /* Add styles for the navigation buttons */
 .navButton {
   background: none;
@@ -56,7 +58,7 @@
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Add some shadow for better visual distinction */
 }
 
-/* Existing styles from your file below */
+/* Existing desktop styles */
 .container {
   min-height: 100vh;
   display: flex;
@@ -295,4 +297,86 @@
 
 .projectsLink:hover {
   color: #9ca3af;
+}
+
+/* ========================= */
+/* Mobile-Specific Styles */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .heroHeader {
+    font-size: 8vw;
+    margin-bottom: 4vh;
+  }
+
+  .heroSubtitle {
+    font-size: 5vw;
+    padding: 4vw;
+  }
+
+  .socialIcons {
+    gap: 6vw;
+  }
+
+  .icon {
+    width: 8vw;
+    height: 8vw;
+  }
+
+  .arrowDown {
+    width: 6vw;
+    height: 6vw;
+  }
+
+  .learnMore {
+    font-size: 4vw;
+  }
+
+  /* Projects section */
+  .projectsContainer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 6vw;
+  }
+
+  .projectCard {
+    width: 90vw; /* Full width on mobile */
+  }
+
+  .paginationDots .dot {
+    width: 2vw;
+    height: 2vw;
+  }
+
+  /* Skills section */
+  .skillGrid {
+    grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
+    gap: 4vw;
+  }
+
+  .skillCard {
+    width: 45vw; /* Take more space on mobile */
+  }
+
+  /* Experience & education */
+  .experienceList,
+  .educationList {
+    width: 90vw; /* Full width on mobile */
+  }
+
+  .experienceTitle,
+  .educationDegree {
+    font-size: 5vw;
+  }
+
+  .experienceCompany,
+  .educationSchool,
+  .experienceDescription,
+  .educationDescription {
+    font-size: 4vw;
+  }
+
+  .projectsLink {
+    font-size: 5vw;
+  }
 }
