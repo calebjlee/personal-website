@@ -351,11 +351,19 @@
   /* Skills section */
   .skillGrid {
     grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
-    gap: 4vw;
+    gap: 4vw; /* Adjust gap for mobile */
+    padding: 0 4vw; /* Add padding to the grid container to ensure space around cards */
   }
 
   .skillCard {
-    width: 45vw; /* Take more space on mobile */
+    width: 100%; /* Make cards take full width of the grid column */
+    padding: 4vw; /* Adjust padding for better content alignment */
+    box-sizing: border-box; /* Ensure padding is included within width */
+  }
+
+  /* To prevent overflow due to long text or content */
+  .skillCard:hover {
+    transform: none; /* Disable scaling on mobile to avoid overflow on hover */
   }
 
   /* Experience & education */
