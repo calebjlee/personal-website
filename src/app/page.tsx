@@ -8,17 +8,6 @@ import Image from 'next/image';
 import { Code, Database, Bot, ChartCandlestick, HeartPulse, X, HandHelping } from 'lucide-react';
 import ProjectCard from "../components/projectCard";
 
-// Define the type for project structure
-interface Project {
-  title: string;
-  description: string;
-  icon: JSX.Element;
-  github?: string;
-  link?: string;
-  live?: string;
-  tags: string[];
-}
-
 export default function Home() {
   const skills = [
     { name: "Python", level: 95 },
