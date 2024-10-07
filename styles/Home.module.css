@@ -219,7 +219,7 @@
 }
 
 .skillName {
-  font-size: 1vw;
+  font-size: 0.8vw + 0.2vh;
   font-weight: 500;
   white-space: nowrap;
 }
@@ -233,12 +233,12 @@
 .skillBarBackground {
   background-color: #4b5563;
   border-radius: 9999px;
-  height: 1.2vh;
+  height: 1.2vw;
 }
 
 .skillBar {
   background-color: #3b82f6;
-  height: 1.2vh;
+  height: 1.2vw;
   border-radius: 9999px;
 }
 
@@ -357,7 +357,7 @@
 
   .skillCard {
     width: 100%; /* Make cards take full width of the grid column */
-    padding: 10vw; /* Adjust padding for better content alignment */
+    padding: 4vw; /* Adjust padding for better content alignment */
     box-sizing: border-box; /* Ensure padding is included within width */
   }
 
