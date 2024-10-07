@@ -12,8 +12,8 @@
 }
 
 .logo {
-  width: 5vw + 0.1vh; /* Scale width to viewport width */
-  height: 5vw + 0.1vh; /* Scale height to viewport width */
+  width: 5vw; /* Scale width to viewport width */
+  height: 5vw; /* Scale height to viewport width */
   object-fit: cover;
   border-radius: 50%;
 }
@@ -30,9 +30,19 @@
   text-decoration: none;
   padding: 0.5vw 1vw; /* Scale padding to viewport width */
   font-weight: bold;
-  font-size: 1vw + 0.05vh;
+  font-size: 1vw;
 }
 
 .navLink:hover {
   color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 10vw; /* Scale width to viewport width */
+    height: 10vw; /* Scale height to viewport width */
+  }
+  .navLink {
+    font-size: 2vw;
+  }
 }

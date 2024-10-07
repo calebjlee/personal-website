@@ -225,3 +225,50 @@
 .projectLink:hover {
   color: #ffffff;
 }
+
+@media (max-width: 768px) {
+
+  .title {
+    font-size: 5vw;
+  }
+
+  .projectsContainer {
+    min-height: 50vh;
+  }
+
+  .projectCard {
+    padding: 3vw;
+  }
+
+  .projectHeader {
+    flex-direction: column;
+    gap: 1.5vw;
+  }
+
+  .projectIcon {
+    padding: 1.5vw;
+  }
+
+  .projectTitle {
+    font-size: 3.5vw;
+  }
+
+  .projectDescription {
+    font-size: 2.25vw;
+  }
+
+  .projectTags {
+    gap: 1vw;
+  }
+
+  .tag {
+    margin-right: 1vw;
+    margin-top: 1.5vw;
+    padding: 1vw;
+    font-size: 2.25vw;
+  }
+
+  .projectFooter {
+    gap: 2vw;
+  }
+}

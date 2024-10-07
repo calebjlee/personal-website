@@ -219,13 +219,13 @@
 }
 
 .skillName {
-  font-size: 0.8vw + 0.1vh;
+  font-size: 1vw;
   font-weight: 500;
   white-space: nowrap;
 }
 
 .skillLevel {
-  font-size: 0.9vw;
+  font-size: 1vw;
   font-weight: 500;
   white-space: nowrap;
 }
@@ -314,6 +314,14 @@
     padding: 4vw;
   }
 
+  .section {
+    padding: 8vw 4vw;
+  }
+
+  .sectionTitle {
+    font-size: 6vw;
+  }
+
   .socialIcons {
     gap: 6vw;
   }
@@ -337,6 +345,7 @@
     flex-direction: column;
     align-items: stretch;
     gap: 6vw;
+    min-height: 20vh;
   }
 
   .projectCard {
@@ -366,25 +375,37 @@
     transform: none; /* Disable scaling on mobile to avoid overflow on hover */
   }
 
+  .skillName {
+    font-size: 2vw;
+  }
+
+  .skillLevel {
+    font-size: 2vw;
+  }
+
   /* Experience & education */
   .experienceList,
   .educationList {
-    width: 90vw; /* Full width on mobile */
+    width: 80vw; /* Full width on mobile */
   }
 
   .experienceTitle,
   .educationDegree {
-    font-size: 5vw;
+    font-size: 4vw;
   }
 
   .experienceCompany,
   .educationSchool,
   .experienceDescription,
   .educationDescription {
-    font-size: 4vw;
+    font-size: 3vw;
   }
 
   .projectsLink {
     font-size: 5vw;
+  }
+
+  .divider {
+    margin-bottom: 4vh;
   }
 }
