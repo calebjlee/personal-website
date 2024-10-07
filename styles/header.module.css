@@ -1,27 +1,26 @@
-/* Default styles (Desktop) */
 .header {
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 100;
   background-color: #1e1e1e;
-  padding: 1vw; /* Use viewport width for larger screens */
+  padding: 0.5vw + 0.25vh; /* Scale padding to viewport width */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 0.125vw 0.25vw rgba(0, 0, 0, 0.7); /* Use viewport width for shadow */
+  box-shadow: 0 0.125vw 0.25vw rgba(0, 0, 0, 0.7); /* Scale box shadow to viewport width */
 }
 
 .logo {
-  width: 5vw; /* Scale logo width */
-  height: 5vw; /* Scale logo height */
+  width: 5vw; /* Scale width to viewport width */
+  height: 5vw; /* Scale height to viewport width */
   object-fit: cover;
   border-radius: 50%;
 }
 
 .nav {
   display: flex;
-  gap: 1vw; /* Scale gap between links */
+  gap: 1vw; /* Scale gap to viewport width */
 }
 
 .navLink {
@@ -29,53 +28,11 @@
   color: #ffffff;
   cursor: pointer;
   text-decoration: none;
-  padding: 0.5vw 1vw; /* Scaled padding */
+  padding: 0.5vw 1vw; /* Scale padding to viewport width */
   font-weight: bold;
-  font-size: 1.25vw;
+  font-size: 1.2vw + 0.1vh;
 }
 
 .navLink:hover {
   color: #ffffff;
-}
-
-/* Mobile Styles */
-@media (max-width: 768px) {
-  .header {
-    flex-direction: column; /* Stack items vertically on smaller screens */
-    padding: 1rem; /* Use rem for padding on mobile for better scaling */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Adjust shadow for mobile */
-  }
-
-  .logo {
-    width: 15vw; /* Make logo slightly bigger for mobile */
-    height: 15vw;
-  }
-
-  .nav {
-    flex-direction: column; /* Stack navigation links */
-    gap: 0.5rem; /* Adjust gap for better spacing on mobile */
-    margin-top: 1rem; /* Add margin to separate from logo */
-  }
-
-  .navLink {
-    padding: 0.75rem 1.5rem; /* Increase padding for easier touch interaction */
-    font-size: 1rem; /* Use rem for font size, better control over text size on mobile */
-  }
-}
-
-/* Extra Small Screens (e.g. phones below 480px width) */
-@media (max-width: 480px) {
-  .header {
-    padding: 0.5rem; /* Reduce padding further */
-  }
-
-  .logo {
-    width: 20vw; /* Further increase logo size */
-    height: 20vw;
-  }
-
-  .navLink {
-    font-size: 0.875rem; /* Slightly smaller text size for very small screens */
-    padding: 0.5rem 1rem; /* Compact padding */
-  }
 }

@@ -357,7 +357,7 @@
 
   .skillCard {
     width: 100%; /* Make cards take full width of the grid column */
-    padding: 4vw; /* Adjust padding for better content alignment */
+    padding: 10vw; /* Adjust padding for better content alignment */
     box-sizing: border-box; /* Ensure padding is included within width */
   }
 
