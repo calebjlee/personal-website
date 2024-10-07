@@ -128,6 +128,7 @@
   flex-direction: column;
   gap: 2vw;
   perspective: 1000px;
+  min-height: 55vh;
 }
 
 /* Project Card */

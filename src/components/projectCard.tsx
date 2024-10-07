@@ -1,10 +1,11 @@
 // components/ProjectCard.tsx
 'use client';
 
-import { useEffect, useState } from 'react';
+import { Attributes, useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Github, ExternalLink } from 'lucide-react';
+import { Github, ExternalLink, LucideIcon } from 'lucide-react';
 import styles from '/styles/projects.module.css';
+import React from 'react';
 
 // Define the type for project structure
 interface Project {
@@ -46,7 +47,8 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
       >
         <div className={styles.projectHeader}>
           <div className={styles.projectIcon}>
-            {project.icon}
+            {/* {project.icon} */}
+            {React.cloneElement(project.icon as React.ReactElement<LucideIcon>, { size: '2vw' } as Partial<LucideIcon> & Attributes)}
           </div>
           <div className={styles.projectContainer}>
             <h2 className={styles.projectTitle}>{project.title}</h2>
@@ -66,13 +68,13 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
           {/* GitHub Icon */}
           {project.github &&
           <a href={project.github} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
-            <Github size={20} />
+            <Github size={'2vw'} />
           </a>
         }
           {/* Live Project Icon (if available) */}
           {project.link && (
             <a href={project.link} target="_blank" rel="noopener noreferrer" className={styles.projectLink}>
-              <ExternalLink size={20} />
+              <ExternalLink size={'2vw'} />
             </a>
           )}
         </div>

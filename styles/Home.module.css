@@ -1,3 +1,62 @@
+/* Add styles for the navigation buttons */
+.navButton {
+  background: none;
+  border: none;
+  color: #e0e0e0;
+  font-size: 2vw;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: 0 1vw;
+}
+
+.navButton:hover {
+  transform: scale(1.2);
+}
+
+/* Pagination dots styles */
+.paginationDots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+}
+
+.dot {
+  height: 1vw;
+  width: 1vw;
+  margin: 0 0.5vw;
+  background-color: #555;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.activeDot {
+  background-color: #3b82f6; /* Active dot color */
+}
+
+/* Modify projectsContainer to align items properly and fix card width */
+.projectsContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 2vw;
+  min-height: 55vh;
+}
+
+.projectCard {
+  width: 400px; /* Fixed width for the project card */
+  max-width: 100%; /* Make sure it doesn't overflow on smaller screens */
+  padding: 20px;
+  background-color: #2d2d2d;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  margin: 0 auto; /* Center the card horizontally */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Add some shadow for better visual distinction */
+}
+
+/* Existing styles from your file below */
 .container {
   min-height: 100vh;
   display: flex;
@@ -122,18 +181,16 @@
   margin-bottom: 2.5vh;
 }
 
-/* My Skills Section */
 .skillGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* Single column for mobile */
+  grid-template-columns: repeat(4, 1fr);
   gap: 2.5vw;
 }
 
-@media (min-width: 1200px) { 
-  /* Two skill cards per row */
+@media (min-width: 1200px) {
   .skillGrid {
-    grid-template-columns: repeat(4, 1fr); /* Two columns on larger screens */
-    justify-content: space-between; /* Ensure proper spacing between cards */
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: space-between;
   }
 }
 
@@ -142,8 +199,8 @@
   padding: 1.5vw;
   border-radius: 1vw;
   transition: all 0.3s ease;
-  width: 18vw; /* Set the width of the cards */
-  margin: 0 auto; /* Center the cards horizontally */
+  width: 18vw;
+  margin: 0 auto;
 }
 
 .skillCard:hover {
@@ -156,17 +213,17 @@
   justify-content: space-between;
   align-items: center;
   margin-bottom: 0.8vw;
-  white-space: nowrap; /* Prevent text from wrapping */
+  white-space: nowrap;
 }
 
 .skillName {
-  font-size: 1vw; /* Keep the skill name font size as desired */
+  font-size: 1vw;
   font-weight: 500;
   white-space: nowrap;
 }
 
 .skillLevel {
-  font-size: 0.9vw; /* Keep the skill level font size */
+  font-size: 0.9vw;
   font-weight: 500;
   white-space: nowrap;
 }
@@ -183,21 +240,20 @@
   border-radius: 9999px;
 }
 
-/* Experience & Education Section */
 .experienceList,
 .educationList {
-  margin-bottom: 2vh; 
+  margin-bottom: 2vh;
   width: 60vw;
 }
 
 .experienceItem,
 .educationItem {
-  border-left: 0.15vw solid #4b5563; 
+  border-left: 0.15vw solid #4b5563;
   padding-left: 1vw;
   padding-top: 1vh;
   padding-bottom: 1vh;
   transition: all 0.3s ease;
-  border-radius: 0.5vw; 
+  border-radius: 0.5vw;
 }
 
 .experienceItem:hover,
@@ -208,7 +264,7 @@
 
 .experienceTitle,
 .educationDegree {
-  font-size: 1.25vw; 
+  font-size: 1.25vw;
   font-weight: 600;
 }
 
@@ -221,7 +277,7 @@
 .experienceDescription,
 .educationDescription {
   margin-top: 1vh;
-  font-size: 1vw; 
+  font-size: 1vw;
 }
 
 .projectsLinkContainer {

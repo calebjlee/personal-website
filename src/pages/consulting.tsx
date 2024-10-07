@@ -20,7 +20,7 @@ const projects = [
   },
   {
     title: 'Sister Pie',
-    description: 'Performed market analysis on the frozen pie market.',
+    description: 'Performed market analysis on the frozen pie crust market.',
     icon: <Image src='/icons/sister-pie-icon.png' alt="Sister Pie Icon" width={24} height={24} />, // Use custom Sister Pie icon
     tags: ['Market Entry', 'Competitor Analysis', 'Customer Sentiment Analysis', 'Market Research', 'PowerPoint & Presentation Skills'],
     live: 'https://www.sisterpie.com',
