@@ -6,7 +6,6 @@ import Footer from '../components/footer';
 import ProjectCard from './projectCard';
 import styles from '/styles/projects.module.css';
 
-// Define the type for project structure
 interface Project {
   title: string;
   description: string;

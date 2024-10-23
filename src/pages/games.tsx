@@ -14,9 +14,9 @@ const projects = [
   },
   {
     title: 'Zetamac',
-    description: 'Try to beat my highscore of 113! (Use default settings)',
+    description: 'Try to beat my highscore of 116! (Use default settings)',
     icon: <Image src='/icons/calculator-icon.png' alt="Calculator Icon" width={24} height={24} />,
-    tags: ['Quiiiiick Maths', '113'],
+    tags: ['Quiiiiick Maths', '116'],
     link: 'https://arithmetic.zetamac.com/',
     live: 'https://arithmetic.zetamac.com/',
   },

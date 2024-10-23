@@ -85,11 +85,11 @@ export default function Home() {
     },
     {
       title: 'Solsnipes',
-      description: 'An Algorithmic Cryptocurrency News Trader that leverages natural language processing and machine learning to analyze news articles and make trading decisions in real-time.',
+      description: 'An Algorithmic Cryptocurrency News Trader that leverages natural language processing and machine learning to analyze social media channels and make trading decisions in real-time.',
       icon: <Bot size={24} />,
       github: 'https://github.com/calebjlee/solsnipes',
       live: 'https://github.com/calebjlee/solsnipes',
-      tags: ['TypeScript', 'JavaScript', 'Solana Web3.js', 'AWS EC2', 'LLMs', 'APIS', 'NLP'],
+      tags: ['TypeScript', 'JavaScript', 'Solana Web3.js', 'AWS EC2', 'LLMs', 'APIs', 'NLP'],
     },
     {
       title: 'Prosperity Trading Bot',
