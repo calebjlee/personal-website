@@ -5,6 +5,13 @@ import '../app/globals.css';
 
 const projects = [
   {
+    title: 'Zephyr Technologies',
+    description: 'Built basketball team detection pipeline with computer vision algorithms, providing actionable analytics for professional sports teams.',
+    icon: <Image src='/icons/zephyr-icon.png' alt="Zephyr Icon" width={24} height={24} />, // Use custom Zephyr icon
+    tags: ['Computer Vision', 'Sports Analytics', 'Machine Learning', 'Python', 'Team Detection'],
+    live: 'https://www.withzephyr.com',
+  },
+  {
     title: 'General Motors',
     description: 'Conducted a market sizing and proof of value of international markets.',
     icon: <Image src='/icons/gm-icon.png' alt="GM Icon" width={24} height={24} />, // Use custom GM icon

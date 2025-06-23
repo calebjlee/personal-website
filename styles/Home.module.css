@@ -183,63 +183,54 @@
   margin-bottom: 2.5vh;
 }
 
-.skillGrid {
+.skillCategoriesGrid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 2.5vw;
-}
-
-@media (min-width: 1200px) {
-  .skillGrid {
-    grid-template-columns: repeat(4, 1fr);
-    justify-content: space-between;
-  }
-}
-
-.skillCard {
-  background-color: #2d2d2d;
-  padding: 1.5vw;
-  border-radius: 1vw;
-  transition: all 0.3s ease;
-  width: 18vw;
+  max-width: 80vw;
   margin: 0 auto;
 }
 
-.skillCard:hover {
+.skillCategory {
+  background-color: #2d2d2d;
+  padding: 2vw;
+  border-radius: 1vw;
+  transition: all 0.3s ease;
+}
+
+.skillCategory:hover {
   box-shadow: 0 0 1.2vw rgba(59, 130, 246, 0.5);
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
-.skillHeader {
+.skillCategoryTitle {
+  font-size: 1.5vw;
+  font-weight: 600;
+  margin-bottom: 1.5vh;
+  color: #3b82f6;
+  text-align: center;
+}
+
+.skillTags {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0.8vw;
-  white-space: nowrap;
+  flex-wrap: wrap;
+  gap: 0.8vw;
+  justify-content: center;
 }
 
-.skillName {
-  font-size: 1vw;
-  font-weight: 500;
-  white-space: nowrap;
-}
-
-.skillLevel {
-  font-size: 1vw;
-  font-weight: 500;
-  white-space: nowrap;
-}
-
-.skillBarBackground {
+.skillTag {
   background-color: #4b5563;
-  border-radius: 9999px;
-  height: 1.2vw;
+  color: #e0e0e0;
+  padding: 0.5vw 1vw;
+  border-radius: 0.5vw;
+  font-size: 1vw;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-.skillBar {
+.skillTag:hover {
   background-color: #3b82f6;
-  height: 1.2vw;
-  border-radius: 9999px;
+  transform: scale(1.05);
 }
 
 .experienceList,
@@ -358,29 +349,32 @@
   }
 
   /* Skills section */
-  .skillGrid {
-    grid-template-columns: 1fr 1fr; /* 2 columns on mobile */
-    gap: 4vw; /* Adjust gap for mobile */
-    padding: 0 4vw; /* Add padding to the grid container to ensure space around cards */
+  .skillCategoriesGrid {
+    grid-template-columns: 1fr;
+    gap: 4vw;
+    max-width: 90vw;
   }
 
-  .skillCard {
-    width: 100%; /* Make cards take full width of the grid column */
-    padding: 4vw; /* Adjust padding for better content alignment */
-    box-sizing: border-box; /* Ensure padding is included within width */
+  .skillCategory {
+    padding: 4vw;
   }
 
-  /* To prevent overflow due to long text or content */
-  .skillCard:hover {
-    transform: none; /* Disable scaling on mobile to avoid overflow on hover */
+  .skillCategory:hover {
+    transform: none; /* Disable scaling on mobile to avoid overflow */
   }
 
-  .skillName {
-    font-size: 2vw;
+  .skillCategoryTitle {
+    font-size: 4vw;
+    margin-bottom: 3vh;
   }
 
-  .skillLevel {
-    font-size: 2vw;
+  .skillTags {
+    gap: 2vw;
+  }
+
+  .skillTag {
+    padding: 2vw 3vw;
+    font-size: 3vw;
   }
 
   /* Experience & education */

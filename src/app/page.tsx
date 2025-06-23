@@ -9,31 +9,43 @@ import { Code, Database, Bot, ChartCandlestick, HeartPulse, X, HandHelping } fro
 import ProjectCard from "../components/projectCard";
 
 export default function Home() {
-  const skills = [
-    { name: "Python", level: 95 },
-    { name: "C++", level: 90 },
-    { name: "SQL", level: 85 },
-    { name: "TypeScript", level: 80 },
-    { name: "React", level: 80 },
-    { name: "HTML/CSS/Tailwind", level: 80 },
-    { name: "JavaScript", level: 75 },
-    { name: "React Native", level: 85 },
-    { name: "Git", level: 95 },
-    { name: "AWS", level: 75 },
-    { name: "Flask", level: 75 },
-    { name: "Microsoft PlayWright", level: 70 },
-    { name: "APIs", level: 85 },
-    { name: "Web Hosting", level: 95 },
-    { name: "PowerPoint", level: 90 },
-    { name: "Excel", level: 85 },
+  const skillCategories = [
+    {
+      category: "Programming Languages",
+      skills: ["Python", "C++", "TypeScript", "JavaScript"]
+    },
+    {
+      category: "Web Development",
+      skills: ["React", "HTML/CSS/Tailwind", "React Native", "Flask", "APIs"]
+    },
+    {
+      category: "Data & Business",
+      skills: ["SQL", "Excel", "PowerPoint"]
+    },
+    {
+      category: "Tools & Technologies",
+      skills: ["Git", "AWS", "Microsoft PlayWright", "Web Hosting"]
+    }
   ];
 
   const experiences = [
     {
+      title: "Software Development Engineering Intern",
+      company: "Amazon",
+      date: "May 2025 - Present",
+      description: "Refactoring backend systems for gift card reloads, consolidating outdated systems into robust APIs and optimizing data handling mechanisms.",
+    },
+    {
+      title: "Software Engineering Intern",
+      company: "Zephyr Technologies, Inc.",
+      date: "January 2025 - May 2025",
+      description: "Built basketball team detection pipeline with computer vision algorithms, providing actionable analytics for professional sports teams.",
+    },
+    {
       title: "Software Engineering Intern",
       company: "Forian",
       date: "June 2024 - August 2024",
-      description: "Developed back-end data analytics tools for healthcare data.",
+      description: "Integrated Python algorithms to consolidate patient information and created automated software systems in Databricks SQL for medical claims processing.",
     },
     {
       title: "Research Assistant",
@@ -44,8 +56,8 @@ export default function Home() {
     {
       title: "Business Analyst",
       company: "MEG Consulting",
-      date: "January 2023 - Present",
-      description: "Working with Fortune 100 companies and local businesses on various projects.",
+      date: "February 2024 - Present",
+      description: "Conducted market research for Fortune 500 companies and local businesses, including international social media market analysis and market entry strategies.",
     },
     {
       title: "Software Analyst",
@@ -57,7 +69,7 @@ export default function Home() {
 
   const education = [
     {
-      degree: "B.S. in Data Science and Mathematics",
+      degree: "B.S.E in Data Science and Mathematics",
       school: "University of Michigan",
       description: "Relevant coursework: Machine Learning, Data Structures and Algorithms, Combinatorics & Graph Theory",
       clubs: "Clubs I'm a part of: MEG Consulting, Atlas Digital Consulting, Michigan Finance and Mathematics Society"
@@ -212,18 +224,16 @@ export default function Home() {
       {/* Skills Section */}
       <section className={styles.section}>
         <h2 className={styles.sectionTitle}>My Skills</h2>
-        <div className={styles.skillGrid}>
-          {skills.map((skill, index) => (
-            <div key={index} className={styles.skillCard}>
-              <div className={styles.skillHeader}>
-                <span className={styles.skillName}>{skill.name}</span>
-                <span className={styles.skillLevel}>{skill.level}%</span>
-              </div>
-              <div className={styles.skillBarBackground}>
-                <div
-                  className={styles.skillBar}
-                  style={{ width: `${skill.level}%` }}
-                ></div>
+        <div className={styles.skillCategoriesGrid}>
+          {skillCategories.map((category, index) => (
+            <div key={index} className={styles.skillCategory}>
+              <h3 className={styles.skillCategoryTitle}>{category.category}</h3>
+              <div className={styles.skillTags}>
+                {category.skills.map((skill, skillIndex) => (
+                  <span key={skillIndex} className={styles.skillTag}>
+                    {skill}
+                  </span>
+                ))}
               </div>
             </div>
           ))}
@@ -267,13 +277,13 @@ export default function Home() {
       <section className={styles.section}>
           <h2 className={styles.sectionTitle}>About Me</h2>
           <p className={styles.text}>
-            Hi! I&apos;m Caleb, a passionate Software Engineer from Irvine, California. I&apos;m currently studying Data Science and Mathematics at the University of Michigan. 
-            Last summer I interned at Forian, a publicly-traded healthtech firm, where I helped create the back-end of data analytics tools on healthcare data.
+            Hi! I&apos;m Caleb, a Software Engineer from Irvine, California. I&apos;m studying Data Science and Mathematics at the University of Michigan with experience in algorithms, machine learning, and business consulting.
           </p>
           <p className={styles.text}>
-            On campus, I&apos;m also involved in a business consulting club and a tech consulting club, where I&apos;ve worked with large Fortune 100 companies like General Motors as well as smaller local companies like Sister Pie.
-            I&apos;m also a part of the Lab of Geometry at Michigan (Log(M)), where I conduct research on the large scale geometry of integers.
-            Outside of academics, I enjoy playing badminton and logical games like chess.
+            This summer, I&apos;ll be joining Amazon as a Software Development Engineering Intern. Previously, I worked at Forian consolidating patient databases and at Zephyr Technologies building computer vision algorithms for sports analytics.
+          </p>
+          <p className={styles.text}>
+            On campus, I&apos;m involved in MEG Consulting and Atlas Digital Consulting, working with Fortune 500 companies and local businesses. Outside of work, I enjoy chess, cryptocurrency trading, poker, badminton, and creating piano covers.
           </p>
         </section>
 
